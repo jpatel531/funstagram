@@ -1,0 +1,16 @@
+<% if @posts.none? %>
+	No posts yet
+<% else %>
+
+	<% @posts.each do |post| %>
+
+		<% if post.image.present? %>
+			<%= image_tag post.image.url(:thumb), class: 'upload' %>
+		<% end %>
+
+		<%= post.title %>
+
+	<% end %>
+<% end %>
+
+<%= link_to 'New Post', new_post_path %>
