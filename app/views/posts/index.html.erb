@@ -1,16 +1,25 @@
+<div class="container">
 <% if @posts.none? %>
 	No posts yet
 <% else %>
 
-	<% @posts.each do |post| %>
-
-		<% if post.image.present? %>
-			<%= image_tag post.image.url(:thumb), class: 'upload' %>
-		<% end %>
-
-		<%= post.title %>
-
+	<div class="row">
+		<% @posts.each do |post| %>
+			<div class="col-sm-4">
+				<div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= post.title %></h3>
+            </div>
+            <div class="panel-body">
+							<% if post.image.present? %>
+								<%= image_tag post.image.url(:thumb), class: 'upload' %>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
 	<% end %>
-<% end %>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
+</div>
