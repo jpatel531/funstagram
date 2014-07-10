@@ -9,7 +9,7 @@
         </button>
         <a class="navbar-brand" href="#">Funstagram</a>
       </div>
-      <% unless user_signed_in? %>
+      <% if !user_signed_in? %>
         <div class="navbar-collapse collapse">
           <%= form_for(User.new, as: :user, url: session_path(:user), html: { class: 'navbar-form navbar-right' }) do |f| %>
 
@@ -22,6 +22,7 @@
             </div>
 
             <%= f.button "Sign in", class: 'btn btn-success' %>
+            <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-default' %>  
           <% end %>
         <% end %>
       </div><!--/.navbar-collapse -->

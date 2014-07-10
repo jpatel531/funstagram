@@ -16,5 +16,15 @@ describe 'posting pictures' do
 			expect(page).to have_css('img.upload')
 		end
 	end
+
+	context 'when signed out' do 
+
+		it 'doesn\'t let you upload an image' do 
+			visit '/posts'
+			click_link 'New Post'
+			expect(page).to have_content 'Sign in'
+      expect(page).not_to have_field 'Title'
+		end
+	end
 end
 

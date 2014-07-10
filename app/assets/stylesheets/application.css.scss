@@ -16,6 +16,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-tagsinput";
 
 .panel-body {
 	display: flex;
@@ -24,5 +25,9 @@
 	img {
 		max-width: 100%;
 	}
+
+}
+
+.row {
 
 }
