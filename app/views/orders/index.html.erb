@@ -1,0 +1,10 @@
+<% unless @orders.any? %>
+	No orders yet
+<% else %>
+
+	<% @orders.each do |order| %>
+		<%= order.post.title %>
+		<%= order.user.email %>
+	<% end %>
+
+<% end %>

@@ -4,15 +4,17 @@
       <h3 class="panel-title"><%= post.title %></h3>
     </div>
     <div class="panel-body">
+    	<div class="image">
 			<% if post.image.present? %>
 				<%= image_tag post.image.url(:thumb), class: 'upload' %>
 				<% end %>
-				<p>
-				<% post.tags.each do |tag| %>
-					<%= link_to tag.name, tag_path(tag) %>
-					<% end %>
-				<%= link_to 'Map', post_maps_path(post), class: 'btn btn-success' unless post.address.blank? %>
-				</p>
+			</div>
+			<div class="post-info">
+			<% post.tags.each do |tag| %>
+				<%= link_to tag.name, tag_path(tag) %>
+				<% end %>
+			<%= link_to 'Map', post_maps_path(post), class: 'btn btn-success' unless post.address.blank? %>
+			</div>
 		</div>
 	</div>
 </div>
