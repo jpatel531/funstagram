@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/alexpeattie/heroku_secrets.git
+  revision: 717af8e0acf399bc88d2c8c1a7e230023942af0f
+  specs:
+    heroku_secrets (0.0.2)
+
+GIT
   remote: git://github.com/dockyard/capybara-email.git
   revision: 238d7d7b0374b1fc742b273474c659ae05cd99fa
   specs:
@@ -227,6 +233,7 @@ DEPENDENCIES
   capybara-email!
   coffee-rails (~> 4.0.0)
   devise
+  heroku_secrets!
   jbuilder (~> 2.0)
   jquery-rails
   mailcatcher

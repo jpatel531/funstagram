@@ -41,6 +41,8 @@ gem 'devise'
 
 gem 'bootstrap-sass'
 
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Use ActiveModel has_secure_password
