@@ -35,5 +35,17 @@ describe 'orders page' do
 		end
 	end
 
+	describe 'should send an email upon ordering' do 
+		before do
+			clear_emails
+		end
+
+		it 'should send the email' do 
+			Order.create(post: post, user: user)
+			open_email('hello@hi.com')
+			expect(current_email).to have_content	'Order successful!'
+		end
+	end
+	
 end
 

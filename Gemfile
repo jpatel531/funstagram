@@ -29,6 +29,8 @@ gem 'spring',        group: :development
 group :test, :development do 
 	gem 'rspec-rails'
 	gem 'capybara'
+	gem 'capybara-email', github: 'dockyard/capybara-email'
+	gem 'mailcatcher'
 end
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
