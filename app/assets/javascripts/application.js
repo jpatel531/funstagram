@@ -14,10 +14,11 @@
 //= require jquery_ujs
 //= require jquery
 //= require bootstrap-sprockets
-//= require_tree .
 //= require bootstrap-tagsinput
 //= require typeahead
 //= require bootstrap3-typeahead
 //= require gmaps
+//= require websocket_rails/main
+//= require_tree .
 
 
