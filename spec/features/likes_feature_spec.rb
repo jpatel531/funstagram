@@ -10,7 +10,7 @@ describe 'liking posts' do
 		expect(page).to have_link '♥ 0'
 	end
 
-	it 'can be liked, incrementing the like count' do 
+	it 'can be liked, incrementing the like count', js: true do 
 		visit '/posts'
 		click_link '♥ 0'
 		expect(page).to have_link '♥ 1'

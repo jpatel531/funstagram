@@ -29,6 +29,8 @@ gem 'spring',        group: :development
 group :test, :development do 
 	gem 'rspec-rails'
 	gem 'capybara'
+	gem 'database_cleaner'
+	gem 'poltergeist'
 	gem 'capybara-email', github: 'dockyard/capybara-email'
 	gem 'mailcatcher'
 end
