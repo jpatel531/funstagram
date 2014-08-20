@@ -39,9 +39,13 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 
 gem 'aws-sdk'
 
+gem 'launchy'
+
 gem 'devise'
 
 gem 'thin'
+
+gem 'angularjs-rails'
 
 gem 'bootstrap-sass'
 
