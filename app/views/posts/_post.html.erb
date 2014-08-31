@@ -18,7 +18,7 @@
 			<%= link_to "♥ #{post.likes.count}", post_likes_path(post), class: 'like-button', data: {'post-id' => post.id} %>
 			</div>
 
-			<% if post.user %>
+			<% if post.user && user_signed_in? %>
 			<p>Posted by <%= post.user.email%></p>
 			<% unless current_user.following_users.include? post.user %>
 			<p><%= link_to "Follow #{post.user.email}", '#', class: 'follow-button', data: {'to-follow' => post.user.id} %></p>

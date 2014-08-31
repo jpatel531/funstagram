@@ -11,3 +11,12 @@ $(document).ready ->
 		# this = $(@)
 		data = $(@).data('to-follow')
 		$.post url, {follow: data}
+		string = $(@).text().replace('Follow', 'Following')
+		$(@).text(string)
+		$(@).removeAttr("href")
+		$(@).removeClass('follow-button')
+		$(@).addClass('disabled')
+		$(@).css('cursor', 'default').css('color', 'black').css
+		$(@).off('hover')
+
+		
