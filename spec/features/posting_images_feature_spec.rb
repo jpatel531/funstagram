@@ -23,7 +23,7 @@ describe 'posting pictures' do
 			visit '/posts'
 			click_link 'New Post'
 			expect(page).to have_content 'Sign in'
-      expect(page).not_to have_field 'Title'
+     		expect(page).not_to have_field 'Title'
 		end
 	end
 end

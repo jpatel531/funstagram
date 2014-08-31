@@ -4,7 +4,7 @@ describe 'news feed' do
 
 	let(:user_one) { User.create email: 'hello@hi.com', password: '12345678', password_confirmation: '12345678'}
 	let(:user_two) {User.create email: "sup@lo.com", password: '12345678', password_confirmation: '12345678'}
-	before { Post.create title: "Pretty Picture"}
+	before { user_one.posts.create title: "Pretty Picture"}
 
 	context 'likes broadcast', js: true do 
 

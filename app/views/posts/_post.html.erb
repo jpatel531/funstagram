@@ -20,7 +20,7 @@
 
 			<% if post.user %>
 			<p>Posted by <%= post.user.email%></p>
-			<p>Follow <%= post.user.email %></p>
+			<p><%= link_to "Follow #{post.user.email}", '#', class: 'follow-button', data: {'to-follow' => post.user.id} %></p>
 			<% end %>
 		</div>
 	</div>

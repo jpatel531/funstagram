@@ -60,6 +60,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts_as_follower (0.2.1)
     addressable (2.3.6)
     angularjs-rails (1.2.20)
     arel (5.0.1.20140414130214)
@@ -262,6 +263,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_follower
   angularjs-rails
   aws-sdk
   bootstrap-sass
