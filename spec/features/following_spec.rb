@@ -14,7 +14,7 @@ describe 'following' do
 			click_link 'Follow hello@hi.com'
 			sleep 5
 			expect(user_two.following_users).to include user_one
-
+			# expect(page).to have_content 'Following hello@hi.com'
 
 		end
 

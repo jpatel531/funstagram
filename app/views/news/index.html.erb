@@ -1,6 +1,7 @@
+<% if current_user.following_users.any? %>
 <div class="container">
 
-<% PublicActivity::Activity.all.each do |activity| %>
+<% @activities.each do |activity| %>
 
 	<div class="row">
 	<%= activity.owner.email %> 
@@ -23,3 +24,4 @@
 <% end %>
 
 </div>
+<% end %>

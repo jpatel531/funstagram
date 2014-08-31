@@ -8,5 +8,6 @@ $(document).ready ->
 
 		event.preventDefault()
 		url = '/follows'
-		data = $('.follow-button').data('to-follow')
-		$.post(url, {follow: data})
+		# this = $(@)
+		data = $(@).data('to-follow')
+		$.post url, {follow: data}
