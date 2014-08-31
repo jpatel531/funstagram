@@ -1,0 +1,15 @@
+<div class="container">
+
+<% PublicActivity::Activity.all.each do |activity| %>
+
+	<%= activity.owner_type.constantize.find(activity.owner_id).email %> 
+
+
+	<%= activity.key.split(".").last %> 
+
+
+	<%= activity.recipient_type.constantize.find(activity.recipient_id).title %>
+
+<% end %>
+
+</div>

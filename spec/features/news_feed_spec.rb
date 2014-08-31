@@ -15,7 +15,7 @@ describe 'news feed' do
 			click_link '♥ 0'
 			logout(:user_one)
 			login_as user_two
-			visit '/'
+			visit '/news'
 			expect(page).to have_content 'hello@hi.com liked Pretty Picture'
 
 		end
