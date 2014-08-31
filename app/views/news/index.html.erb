@@ -2,13 +2,23 @@
 
 <% PublicActivity::Activity.all.each do |activity| %>
 
-	<%= activity.owner_type.constantize.find(activity.owner_id).email %> 
+	<div class="row">
+	<%= activity.owner.email %> 
 
 
 	<%= activity.key.split(".").last %> 
 
+	<% if activity.recipient_type %>
 
-	<%= activity.recipient_type.constantize.find(activity.recipient_id).title %>
+	<%= activity.recipient.title %>
+
+	<% else %>
+
+	<%= activity.trackable.title %>
+
+	<% end %>
+
+	</div>
 
 <% end %>
 

@@ -15,7 +15,6 @@ describe 'liking posts' do
 	it 'can be liked, incrementing the like count', js: true do 
 		visit '/posts'
 		click_link '♥ 0'
-		save_and_open_page
 		expect(page).to have_link '♥ 1'
 	end
 

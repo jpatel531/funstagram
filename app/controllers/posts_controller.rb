@@ -6,7 +6,9 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.create post_params
+		@user = current_user
+		@post = @user.posts.create post_params
+		@post.create_activity(:posted, owner: current_user)
 		redirect_to '/posts'
 	end
 
