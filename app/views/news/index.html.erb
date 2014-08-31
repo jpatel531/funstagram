@@ -3,21 +3,23 @@
 
 <% @activities.each do |activity| %>
 
-	<div class="row">
-	<%= activity.owner.email %> 
+	<div class="row panel panel-default">
+		<div class="panel-body pull-left">
+		<%= activity.owner.email %> 
 
 
-	<%= activity.key.split(".").last %> 
+		<%= activity.key.split(".").last %> 
 
-	<% if activity.recipient_type %>
+		<% if activity.recipient_type %>
 
-	<%= activity.recipient.title %>
+		<%= activity.recipient.title %>
 
-	<% else %>
+		<% else %>
 
-	<%= activity.trackable.title %>
+		<%= activity.trackable.title %>
 
-	<% end %>
+		<% end %>
+		</div>
 
 	</div>
 

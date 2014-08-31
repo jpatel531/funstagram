@@ -20,7 +20,12 @@
 
 			<% if post.user %>
 			<p>Posted by <%= post.user.email%></p>
+			<% unless current_user.following_users.include? post.user %>
 			<p><%= link_to "Follow #{post.user.email}", '#', class: 'follow-button', data: {'to-follow' => post.user.id} %></p>
+			<% else %>
+			<p><%= "Following #{post.user.email}" %></p>
+			<% end %>
+
 			<% end %>
 		</div>
 	</div>
