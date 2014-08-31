@@ -17,6 +17,11 @@
 			<%= link_to 'Buy', new_post_charge_path(post) %>
 			<%= link_to "♥ #{post.likes.count}", post_likes_path(post), class: 'like-button', data: {'post-id' => post.id} %>
 			</div>
+
+			<% if post.user %>
+			<p>Posted by <%= post.user.email%></p>
+			<p>Follow <%= post.user.email %></p>
+			<% end %>
 		</div>
 	</div>
 </div>
