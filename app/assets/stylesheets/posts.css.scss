@@ -2,3 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.bootstrap-tagsinput input {
+	width: 600px !important;
+}
+
+form.new_post {
+	margin: 0 auto;
+	// display: inline-block;
+}
