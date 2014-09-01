@@ -1,4 +1,4 @@
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -9,7 +9,11 @@
         </button>
         <a class="navbar-brand" href="#">Funstagram</a>
       </div>
+
       <% if !user_signed_in? %>
+
+
+
         <div class="navbar-collapse collapse">
           <%= form_for(User.new, as: :user, url: session_path(:user), html: { class: 'navbar-form navbar-right' }) do |f| %>
 
@@ -24,7 +28,17 @@
             <%= f.button "Sign in", class: 'btn btn-success' %>
             <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-default' %>  
           <% end %>
+        <% else %>
+
+                    <ul class="nav nav-tabs pull-right" role="tablist">
+          <li class="active"><a href="/posts">Home</a></li>
+          <li><a href="/news">News Feed</a></li>
+          <li><a href="<%= new_post_path %>">Post A Picture!</a></li>
+        </ul>
+
         <% end %>
       </div><!--/.navbar-collapse -->
     </div>
   </div>
+
+
