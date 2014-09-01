@@ -51,3 +51,11 @@ cd funstagram
 rspec
 ```
 
+##Planned Fixed and Extensions
+
+* Polish design
+* Extract new post form into a modal
+* Make news feed broadcast more events and show more detail
+* Apply weightings to news feed order, e.g. based on location
+* Fix the tags input field.
+
