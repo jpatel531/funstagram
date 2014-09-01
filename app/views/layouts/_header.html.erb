@@ -30,10 +30,11 @@
           <% end %>
         <% else %>
 
-                    <ul class="nav nav-tabs pull-right" role="tablist">
+          <ul class="nav nav-tabs pull-right" role="tablist">
           <li class="active"><a href="/posts">Home</a></li>
           <li><a href="/news">News Feed</a></li>
           <li><a href="<%= new_post_path %>">Post A Picture!</a></li>
+          <%= content_tag(:li, link_to("Logout", destroy_user_session_path, method: :delete)) %>
         </ul>
 
         <% end %>
