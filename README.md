@@ -10,6 +10,8 @@ To create a larger Rails app with a number of new and different technologies.
 
 [Here is a link to Funstagram on Heroku.](http://funstagram.herokuapp.com)
 
+![Image 1]https://raw.githubusercontent.com/jpatel531/funstagram/master/funstagram_screenshot.jpg
+
 ##Technologies
 
 * Ruby
