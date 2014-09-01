@@ -48,6 +48,8 @@ gem 'devise'
 
 gem 'thin'
 
+gem 'rails_12factor', group: :production
+
 gem 'angularjs-rails'
 
 gem 'bootstrap-sass'
