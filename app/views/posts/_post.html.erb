@@ -2,6 +2,7 @@
 	<div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title"><%= post.title %></h3>
+      
     </div>
     <div class="panel-body">
     	<div class="image">
@@ -13,19 +14,35 @@
 			<% post.tags.each do |tag| %>
 				<%= link_to tag.name, tag_path(tag) %>
 				<% end %>
+			<div class="row">
 			<%= link_to 'Map', post_maps_path(post), class: 'btn btn-success' unless post.address.blank? %>
+			</div>
+
+			<div class="row text-center">
 			<%= link_to 'Buy', new_post_charge_path(post) %>
+			</div>
+
+			<div class="row text-center">
 			<%= link_to "♥ #{post.likes.count}", post_likes_path(post), class: 'like-button', data: {'post-id' => post.id} %>
+			</div>
+
 			</div>
 
 			<% if post.user && user_signed_in? %>
 			<p>Posted by <%= post.user.email%></p>
 			<% unless current_user.following_users.include? post.user %>
-			<p><%= link_to "Follow #{post.user.email}", '#', class: 'follow-button', data: {'to-follow' => post.user.id} %></p>
+			<p><%= link_to "Follow #{post.user.email}", '#', class: 'follow-button', data: {'to-follow' => post.user.id} %>
+			</p>
 			<% else %>
 			<p><%= "Following #{post.user.email}" %></p>
 			<% end %>
 
+			<% end %>
+
+			<% if post.user == current_user %>
+			<!-- <a class="btn btn-danger pull-right" href=''> <span class="glyphicon glyphicon-remove"> -->
+				<%= link_to "Delete Post", post_path(post), method: :delete %>
+			<!-- </span> </button> -->
 			<% end %>
 		</div>
 	</div>
