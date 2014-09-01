@@ -20,8 +20,8 @@ describe 'posting pictures' do
 	context 'when signed out' do 
 
 		it 'doesn\'t let you upload an image' do 
-			visit '/posts'
-			click_link 'New Post'
+			visit '/posts/new'
+			# click_link 'Post A Picture!'
 			expect(page).to have_content 'Sign in'
      		expect(page).not_to have_field 'Title'
 		end
