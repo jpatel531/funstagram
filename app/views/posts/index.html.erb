@@ -1,4 +1,11 @@
-<div class="container">
+
+
+
+<div class="container" ng-controller="PresenceCtrl">
+
+Currently Signed In: {{members.count}}
+
+
 <% if @posts.none? %>
 	No posts yet
 <% else %>
@@ -14,4 +21,3 @@
 
 
 </div>
-
